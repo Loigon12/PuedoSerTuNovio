@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Quieres ser mi novia? ✨ | Nuestra Historia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #ff4b6a;
+      --color-secondary: #ffafbd;
+      --color-accent: #ffc3a0;
+      --color-dark: #333;
+      --color-light: #fef9f5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fff9fb, #f5f7fa);
+      color: var(--color-dark);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 100%;
+    }
+
+ /* ===== SECCIÓN 1: HERO (versión oscura y elegante) ===== */
+#hero {
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), 
+    url('images/5.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding-top: 8rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 30%, rgba(40, 40, 40, 0.4) 80%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+#hero > .container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 1.5rem;
+}
+
+#hero h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 8px rgba(36, 36, 36, 0.6), 
+               0 0 20px rgba(255, 255, 255, 0.2);
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+#hero .subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.92;
+  font-weight: 300;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.btn {
+  padding: 15px 45px;
+  font-size: 1.35rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, #ff2a5d, #ff5e7a);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 
+    0 4px 15px rgba(255, 42, 93, 0.4),
+    inset 0 -2px 0 rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 8px 25px rgba(255, 42, 93, 0.6),
+    0 0 30px rgba(255, 94, 122, 0.4),
+    inset 0 -2px 0 rgba(0,0,0,0.2);
+}
+
+.btn:active {
+  transform: translateY(-2px);
+}
+
+/* Efecto sutil de brillo al pasar el mouse */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(25deg);
+  transition: all 0.6s;
+  opacity: 0;
+}
+
+.btn:hover::after {
+  opacity: 1;
+  left: 120%;
+}
+
+    /* ===== SECCIÓN 2: POR QUÉ TÚ ===== */
+    #why {
+      background: var(--color-light);
+    }
+
+    .reasons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .reason-card {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+    }
+
+    .reason-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .reason-card i {
+      font-size: 3rem;
+      color: var(--color-primary);
+      margin-bottom: 1.2rem;
+    }
+
+    .reason-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ===== SECCIÓN 3: LÍNEA DE TIEMPO ===== */
+    #timeline {
+      position: relative;
+    }
+
+    #timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      background: var(--color-primary);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      width: 100%;
+      margin-bottom: 4rem;
+      position: relative;
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+      max-width: 450px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: white;
+      border: 4px solid var(--color-primary);
+      transform: translateX(-50%);
+    }
+
+    .timeline-date {
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: 0.8rem;
+    }
+
+    /* ===== SECCIÓN 4: GALERÍA ===== */
+    #gallery {
+      background: #fef0f5;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item::after {
+      content: '❤';
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: 1.4rem;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+    /* ===== SECCIÓN 5: PROMESAS ===== */
+    #promises {
+      background: linear-gradient(to right, #ffe0e9, #e0f7fa);
+    }
+
+    .promise-list {
+      list-style: none;
+      width: 100%;
+      max-width: 700px;
+      margin-top: 2rem;
+    }
+
+    .promise-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .promise-item:hover {
+      transform: translateX(8px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    .promise-icon {
+      font-size: 1.6rem;
+      color: var(--color-primary);
+      margin-top: 4px;
+    }
+
+    /* ===== SECCIÓN 6: LA PREGUNTA FINAL ===== */
+    #proposal {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1514884989896-719e7e4e1d9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    #proposal h2 {
+      font-size: 3.8rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+
+    .proposal-btns {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .btn-yes { background: #4CAF50; }
+    .btn-no { background: #f44336; }
+
+    /* ===== EFECTOS Y UTILIDADES ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hidden { display: none; }
+
+    .final-message {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #4CAF50;
+      margin-top: 2rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .final-message.show {
+      opacity: 1;
+    }
+
+    /* Heart easter egg */
+    .easter-heart {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      font-size: 1.8rem;
+      color: var(--color-primary);
+      cursor: pointer;
+      z-index: 1000;
+      opacity: 0.7;
+      transition: transform 0.3s;
+    }
+
+    .easter-heart:hover {
+      transform: scale(1.3);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #timeline::before { left: 30px; }
+      .timeline-item::before { left: 30px; }
+      .timeline-item:nth-child(odd) .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 60px;
+        text-align: left;
+        max-width: calc(100% - 80px);
+      }
+
+      h1 { font-size: 3rem; }
+      h2 { font-size: 2.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      section { padding: 3rem 1rem; }
+      .btn { padding: 12px 28px; font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Easter Egg: Corazón secreto -->
+  <div class="easter-heart" id="easterHeart">❤</div>
+
+  <!-- Sección 1: Hero -->
+  <section id="hero">
+    <div class="container fade-in">
+      <h1>Hola, <span class="highlight">Valerie</span> 💖</h1>
+      <p class="subtitle">Esta no es solo una página web...<br>es una carta de amor interactiva.<br>¿Tienes un minuto para leerla?</p>
+      <button class="btn" onclick="document.getElementById('why').scrollIntoView({behavior: 'smooth'})">Empieza nuestra historia →</button>
+    </div>
+  </section>
+
+  <!-- Sección 2: ¿Por qué tú? -->
+  <section id="why" class="fade-in">
+    <div class="container">
+      <h2>¿Por qué <span class="highlight">tú</span>? 🌟</h2>
+      <p style="font-size: 1.3rem; margin: 1.5rem 0; max-width: 700px; text-align: center;">
+        No es casualidad. Es algo más profundo. Aquí están algunas razones (¡y hay muchas más!):
+      </p>
+      <div class="reasons">
+        <div class="reason-card">
+          <i class="fas fa-laugh"></i>
+          <h3>Tu risa</h3>
+          <p>Iluminas hasta mi día más gris. Me haces feliz sin esfuerzo.</p>
+        </div>
+        <div class="reason-card">
+          <i class="fas fa-heart"></i>
+          <h3>Tu corazón</h3>
+          <p>Eres empática, hermosa, parchada, autentica y simplemente la mujer que tanto le pedi a Dios.</p>
+        </div>
+        <div class="reason-card">
+          <i class="fas fa-comment"></i>
+          <h3>Nuestras conversaciones</h3>
+          <p>Hablamos de todo: desde que comimos hasta que tipo de animal seriamos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<br>
+  <!-- Sección 3: Línea de tiempo -->
+  <section id="timeline" class="fade-in">
+    <div class="container">
+
+      <h2><br>Nuestra <span class="highlight">Línea del Tiempo</span> </h2>
+      <p style="text-align: center; margin: 1.5rem 0; max-width: 700px;">
+       
+      </p>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">06 de Septiembre, 2025</div>
+          <h3>Primer encuentro</h3>
+          <p> Fue en EstánCómodos — uno de esos lugares donde el azar se disfraza de destino. Cuando entraste con tus amigos, aunque fuiste un poco seria al inicio, no fue solo tu presencia lo que me llamó la atención, sino esa energía única que te rodea: natural, brillante, auténtica. Y cuando bailamos… ahí supe que esa noche no la olvidaría nunca.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">17 de Septiembre, 2025</div>
+          <h3>Primera conversación</h3>
+          <p>Los días pasaron, y yo, con un poco de timidez (y muchas ganas), no tenia la valentia de darte una señal. Cuando me seguiste en Instagram, sentí que era mi oportunidad: no quería que quedara solo en una noche especial. Quería conocerte, escucharte, entender quién eres más allá de lo que conoci esa noche.
+        </p></p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">09 de octubre, 2025</div>
+          <h3>Nuestra primera cita</h3>
+          <p>Esta cita fue pura charla, risas sueltas, conversaciones profundas y caminatas sin rumbo. No necesitabamos de un plan elaborado: Bastaba con estar juntos. Recuerdo cada detalle con amor, incluso como temblaba de nervios teniendote al lado (Lo admito) - Desde ahi tuve la certeza de que algo hermoso estaba por comenzar. </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <div class="timeline-date">Hoy</div>
+          <h3>Este momento</h3>
+          <p> Dos meses que se sienten como una vida entera de descubrimientos. Conocerte ha sido uno de los regalos más grandes: tu inteligencia, tu fuerza, tu manera de ver el mundo… hasta esa chispa de “berraca” que tienes cuando defiendes lo que amas. Hoy no vengo con dudas. Vengo con una certeza: <strong>quiero seguir escribiendo esta historia… contigo como protagonista.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 4: Galería -->
+  <section id="gallery" class="fade-in">
+    <div class="container">
+      <h2>Nuestros <span class="highlight">Momentos</span> </h2>
+      <p style="text-align: center; margin: 1.5rem 0;">
+        Fragmentos de una de las tantas memorias que hemos creado juntos.
+      </p>
+
+      <div class="gallery-grid">
+        <!-- Usa URLs reales de tus fotos -->
+        <div class="gallery-item"><img src="images/1.jpg" alt="Café"></div>
+        <div class="gallery-item"><img src="images/2.jpg" alt="Parque"></div>
+        <div class="gallery-item"><img src="images/4.jpg" alt="Risas"></div>
+        <div class="gallery-item"><img src="images/3.jpg" alt="Atardecer"></div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 5: Promesas -->
+  <section id="promises" class="fade-in">
+    <div class="container">
+      <h2>Lo que quiero <span class="highlight">prometerte</span> </h2>
+      <p style="text-align: center; margin: 1.5rem 0; max-width: 700px;">
+        No son solo palabras. Son compromisos que quiero cumplir, día a día, contigo:
+      </p>
+
+      <ul class="promise-list">
+        <li class="promise-item">
+          <div class="promise-icon"><i class="fas fa-sun"></i></div>
+          <div><strong>Buenos días sinceros</strong> — aunque sean con un meme tonto a las 7 AM.</div>
+        </li>
+        <li class="promise-item">
+          <div class="promise-icon"><i class="fas fa-umbrella"></i></div>
+          <div><strong>Refugiarnos juntos</strong> — en las tormentas, las tristezas y los días difíciles.</div>
+        </li>
+        <li class="promise-item">
+          <div class="promise-icon"><i class="fas fa-map-marked-alt"></i></div>
+          <div><strong>Viajar sin miedo</strong> — a lugares nuevos, con mochila, curiosidad y tu playlist favorita.</div>
+        </li>
+        <li class="promise-item">
+          <div class="promise-icon"><i class="fas fa-heart"></i></div>
+          <div><strong>Brindarte bienestar, paz y energia</strong> — porque mas que tu pareja, quiero ser tu compañero de vida y alguien que te sume y no te reste.</div>
+        </li>
+        <li class="promise-item">
+          <div class="promise-icon"><i class="fas fa-star"></i></div>
+          <div><strong>Hacerte sentir única</strong> — porque lo eres. Y no lo digo por decir.</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Sección 6: La Propuesta -->
+  <section id="proposal" class="fade-in">
+    <div class="container">
+      <h2>Y ahora… la pregunta más importante de esta noche💍</h2>
+      <p style="font-size: 1.6rem; max-width: 800px; margin: 1.5rem auto;">
+        Valerie…<br>
+        Quiero seguir construyendo momentos contigo.<br>
+        ¿Te animas a escribir juntos el próximo capítulo?<br>
+        <strong>¿Quieres que seamos novios?</strong>
+      </p>
+
+      <div class="proposal-btns">
+        <button class="btn btn-yes" id="yesBtn">¡Sí, con todo mi corazón! 💞</button>
+        <button class="btn btn-no" id="noBtn">No (Le tengo miedo al exito) 😢</button>
+      </div>
+
+      <div class="final-message" id="finalMessage"></div>
+    </div>
+  </section>
+
+  <!-- Script -->
+  <script>
+    // Animación al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Botones de la propuesta
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const finalMessage = document.getElementById('finalMessage');
+
+    // Mover botón "No" al pasar el mouse
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - 150);
+      const y = Math.random() * (window.innerHeight - 100);
+      noBtn.style.position = 'fixed';
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+
+    // Respuesta tras 3 clics en "No"
+    let noCount = 0;
+    noBtn.addEventListener('click', () => {
+      noCount++;
+      const messages = [
+        "¿Estás segura? 😢",
+        "Piénsalo… ¿de verdad quieres dejar escapar esto? 🤔",
+        "Vale… te doy una pista: Bruno ya te eligió como su humana favorita. 🐶",
+        "Jajaja, ¡ya sé que estás bromeando! 😄\nVamos, dale al otro botón…"
+      ];
+      if (noCount <= messages.length) {
+        alert(messages[noCount - 1]);
+      } else {
+        alert("Está bien… pero ya prenservé las palomitas para cuando digas SÍ. 🍿");
+      }
+    });
+
+    // Al decir SÍ
+    yesBtn.addEventListener('click', () => {
+      // Mensaje final
+      finalMessage.textContent = "¡¡¡GRACIAS POR DECIR SÍ!!! 🎉❤️\nYa no soy solo tu admirador… ¡soy tu novio oficial!";
+      finalMessage.classList.add('show');
+
+      // Confeti
+      createConfetti();
+
+      // Scroll automático arriba (opcional)
+      setTimeout(() => {
+        document.body.style.background = "linear-gradient(135deg, #ffafbd, #ffc3a0, #c9ffbf)";
+        document.getElementById('hero').scrollIntoView({behavior: 'smooth'});
+      }, 2000);
+    });
+
+    // Confeti
+    function createConfetti() {
+      const colors = ['#ff416c', '#ff4b2b', '#ffd89b', '#19547b', '#00c9ff', '#92fe9d', '#ffafbd'];
+      const container = document.body;
+      
+      for (let i = 0; i < 200; i++) {
+        const confetti = document.createElement('div');
+        confetti.style.position = 'fixed';
+        confetti.style.width = Math.random() * 10 + 5 + 'px';
+        confetti.style.height = confetti.style.width;
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+        confetti.style.top = '-10px';
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.opacity = Math.random();
+        confetti.style.zIndex = '9999';
+        
+        container.appendChild(confetti);
+        
+        const animation = confetti.animate([
+          { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+          { transform: `translateY(${window.innerHeight + 100}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }
+        ], {
+          duration: Math.random() * 3000 + 2000,
+          easing: 'cubic-bezier(0,0.9,0.57,1)'
+        });
+        
+        animation.onfinish = () => confetti.remove();
+      }
+    }
+
+    // Easter Egg: corazón secreto
+    document.getElementById('easterHeart').addEventListener('click', () => {
+      alert("¡Sabía que encontrarías este corazón! ❤\n\nEste es nuestro secreto: cada vez que lo veas, recuerda que te elijo, una y otra vez.");
+    });
+
+    // Agregar efecto hover a fotos
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        // Aquí podrías abrir un lightbox real
+        alert("✨ ¡Esta foto me encanta! Gracias por ser parte de ella.");
+      });
+    });
+  </script>
+
+</body>
+</html>
